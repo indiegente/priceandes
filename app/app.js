@@ -20,11 +20,11 @@ angular
         controller:'MainCtrl',
         templateUrl:'/modules/pricing/views/main.html'
     }).when('/pricing',{
-        controller: 'MainCtrl',
+        controller: 'Pricing',
         templateUrl:'/modules/pricing/views/pricing.html'
     }).when('/contact',{
         controller: 'MainCtrl',
         templateUrl:'/modules/pricing/views/contact.html'
     }).otherwise({redirectTo:'/'});
     $locationProvider.html5Mode(true);
-});
+    });
