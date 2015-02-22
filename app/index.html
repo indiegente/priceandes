@@ -35,7 +35,7 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">priceandes</a>
+            <a class="navbar-brand" href="#/">Andes Business</a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -50,9 +50,19 @@
       </div>
     </div>
 
-    <div class="container">
-        <ng-view></ng-view>
-        <!--<div ng-include="'modules/pricing/views/main.html'" ng-controller="MainCtrl"></div>-->
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span2 bs-docs-sidebar">
+                <!--Sidebar content-->
+                <div ng-include="'views/navbar.html'"></div>
+            </div>
+                <div class="span9">
+                <!--Body content-->
+                <ng-view></ng-view>
+            </div>
+        </div>
+
+
     </div>
 
     <div class="footer">
@@ -84,6 +94,11 @@
     <script src="bower_components/jquery-ui/jquery-ui.js"></script>
     <script src="bower_components/angular-ui-sortable/sortable.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/tv4/tv4.js"></script>
+    <script src="bower_components/objectpath/lib/ObjectPath.js"></script>
+    <script src="bower_components/angular-schema-form/dist/schema-form.js"></script>
+    <script src="bower_components/angular-schema-form/dist/bootstrap-decorator.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -91,6 +106,7 @@
         <script src="app.js"></script>
         <script src="modules/pricing/scripts/controllers/main.js"></script>
         <script src="modules/pricing/scripts/controllers/pricing.js"></script>
+        <script src="modules/pricing/scripts/controllers/navbar.js"></script>
         <!-- endbuild -->
 </body>
 </html>

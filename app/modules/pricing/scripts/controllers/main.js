@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the priceandesApp
  */
-angular.module('priceandesApp.controllers',[])
+angular.module('priceandesApp.controllers')
     .controller('MainCtrl', function ($scope) {
         $scope.awesomeThings = [
             'HTML5 Boilerplate',
@@ -20,4 +20,5 @@ angular.module('priceandesApp.controllers',[])
                 { name: 'pricing.html', url: 'views/pricing.html', controlador: ''}
             ];
         $scope.template = $scope.templates[0];
+        $scope.slogan = 'Managing only the best.';
     });

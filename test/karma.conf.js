@@ -28,6 +28,11 @@ module.exports = function(config) {
       'bower_components/jquery-ui/jquery-ui.js',
       'bower_components/angular-ui-sortable/sortable.js',
       'bower_components/angular-route/angular-route.js',
+      'bower_components/angular-resource/angular-resource.js',
+      'bower_components/tv4/tv4.js',
+      'bower_components/objectpath/lib/ObjectPath.js',
+      'bower_components/angular-schema-form/dist/schema-form.js',
+      'bower_components/angular-schema-form/dist/bootstrap-decorator.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       '../app/modules/pricing/scripts/**/*.js',
