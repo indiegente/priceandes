@@ -23,6 +23,9 @@ angular
     }).when('/pricing',{
         controller: 'Pricing',
         templateUrl:'views/pricing.html'
+    }).when('/customers',{
+        controller: 'CustomerCtrl',
+        templateUrl:'views/customers.html'
     }).when('/contact',{
         controller: 'MainCtrl',
         templateUrl:'views/contact.html'
