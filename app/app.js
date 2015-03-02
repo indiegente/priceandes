@@ -14,7 +14,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'ngRoute',
-    'schemaForm',
+    'ng-countries',
     'priceandesApp.controllers'
   ]).config(function($routeProvider, $locationProvider,$httpProvider){
     $routeProvider.when('/',{
@@ -29,9 +29,9 @@ angular
     }).when('/contact',{
         controller: 'MainCtrl',
         templateUrl:'views/contact.html'
-    }).otherwise({redirectTo:'/'});
+    }).otherwise({redirectTo:'/pricing'});
     $locationProvider.html5Mode(true);
-    $httpProvider.defaults.headers.common.Accept="applcation/json";
+    $httpProvider.defaults.headers.common.Accept='applcation/json';
     });
 angular
     .module('priceandesApp').factory('formBuilderService',function($http){
@@ -39,23 +39,23 @@ angular
             getWeather: function(city, country){
                 return $http.get('http://api.openweathermap.org/data/2.5/weather', {
                     params: {
-                        q: 'Lima,Peru'
+                        q: city + ',' + country
                     }
                 });
             },
             getFormComponents: function(idProducto){ //se encarga de traer la informacion para construir el Form
                 return $http.get('components.js', {
                     params: {
-                        q: 'Quinua'
+                        q: idProducto
                     }
                 });
             },
             addFormComponent: function(idForm, componente){ //se encarga de agregar el componente al Form
-
+                return idForm + componente;
             },
             savePricing: function(formBuilt, idProducto){ // guarda en la base de datos la cotizacion.
-
+                return formBuilt + idProducto;
             }
-        }
+        };
     });
 angular.module('priceandesApp.controllers',[]);

@@ -53,7 +53,7 @@
     </div>
 
     <div class="container-fluid">
-        <div class="row-fluid">
+        <div>
             <div class="span2 bs-docs-sidebar">
                 <!--Sidebar content-->
                 <div ng-include="'views/navbar.html'"></div>
@@ -95,10 +95,7 @@
     <script src="bower_components/angular-ui-sortable/sortable.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/tv4/tv4.js"></script>
-    <script src="bower_components/objectpath/lib/ObjectPath.js"></script>
-    <script src="bower_components/angular-schema-form/dist/schema-form.js"></script>
-    <script src="bower_components/angular-schema-form/dist/bootstrap-decorator.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -108,6 +105,9 @@
         <script src="modules/pricing/scripts/controllers/pricing.js"></script>
         <script src="modules/pricing/scripts/controllers/navbar.js"></script>
         <script src="modules/pricing/scripts/controllers/customer.js"></script>
+        <script src="directives/ng-countries.js"></script>
+        <script src="factory/customerFactory.js"></script>
+        <script src="factory/productFactory.js"></script>
         <!-- endbuild -->
 </body>
 </html>
